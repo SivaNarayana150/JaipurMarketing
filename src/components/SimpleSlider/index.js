@@ -1,4 +1,6 @@
 import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 import {ImageElement, SliderContainer} from './styledComponents'
 
@@ -69,15 +71,30 @@ const planetsList = [
   },
 ]
 
+const settings = {
+  dots: true,
+  slidesToScroll: 1,
+  slidesToShow: 2,
+  autoplay: true,
+  autoplaySpeed: 2000,
+}
+
 const SimpleSlider = () => (
-  <SliderContainer>
-    <Slider>
+  <>
+    <Slider
+      dots={settings.dots}
+      slidesToScroll={settings.slidesToScroll}
+      slidesToShow={settings.slidesToShow}
+      autoplay={settings.autoplay}
+      autoplaySpeed={settings.autoplaySpeed}
+    >
       {planetsList.map(eachPlanet => (
-        <li key={eachPlanet.id}>
+        <SliderContainer key={eachPlanet.id}>
           <ImageElement src={eachPlanet.imageUrl} alt={eachPlanet.name} />
-        </li>
+        </SliderContainer>
       ))}
     </Slider>
-  </SliderContainer>
+  </>
 )
+
 export default SimpleSlider

@@ -10,24 +10,31 @@ import {
   LogoText,
   LearnContainer,
   Ribbon,
+  Paragraph,
 } from './styledComponents'
 
 class Home extends Component {
   render() {
     return (
-      <FormBgContainer>
-        <HeaderDiv>
-          <ProfileIcon />
-          <MenuIcon />
-        </HeaderDiv>
-        <LogoText>Hi! Tushar</LogoText>
+      <>
+        <FormBgContainer>
+          <HeaderDiv>
+            <ProfileIcon />
+            <MenuIcon />
+          </HeaderDiv>
+          <LogoText>Hi! Tushar</LogoText>
+        </FormBgContainer>
+
         <SimpleSlider />
-        <LearnContainer>
-          <Ribbon>
-            <p>NEW</p>
-          </Ribbon>
-        </LearnContainer>
-      </FormBgContainer>
+        <FormBgContainer>
+          <LearnContainer>
+            <Ribbon>
+              <Paragraph>New</Paragraph>
+            </Ribbon>
+          </LearnContainer>
+          <Paragraph>What do you want to learn today? Tushar!</Paragraph>
+        </FormBgContainer>
+      </>
     )
   }
 }

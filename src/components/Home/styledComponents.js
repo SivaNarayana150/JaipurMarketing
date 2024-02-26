@@ -4,15 +4,15 @@ import {CgProfile} from 'react-icons/cg'
 
 import {TfiMenuAlt} from 'react-icons/tfi'
 
-import {BsTagFill} from 'react-icons/bs'
-
 export const FormBgContainer = styled.div`
   background-color: #00a7f8;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
+  margin-bottom: 0px;
 `
 
 export const HeaderDiv = styled.div`
@@ -48,12 +48,28 @@ export const LogoText = styled.h1`
   margin-bottom: 20px;
 `
 export const LearnContainer = styled.div`
-background-color:#ffffff
-height:45vh;
-width:70vw;
-
+  background-color: #ffffff;
+  height: 40vh;
+  width: 70vw;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 0px;
 `
 
-export const Ribbon = styled(BsTagFill)`
-  color: yellow;
+export const Ribbon = styled.div`
+  background-color: yellow;
+  height: 25px;
+  width: 100px;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  transform: rotate(-45deg);
+`
+
+export const Paragraph = styled.p`
+  font-family: 'Playfair Display';
+  font-size: 21px;
+  text-align: center;
+  color: #ffffff;
 `
